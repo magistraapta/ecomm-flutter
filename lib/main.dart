@@ -1,3 +1,4 @@
+import 'package:code/pages/home_page.dart';
 import 'package:code/pages/sign_up.dart';
 import 'package:code/pages/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashPage(),
-        '/sign-up':(context) => SignUp()
+        '/sign-up':(context) => SignUp(),
+        '/home-page':(context) => HomePage()
         },
     );
   }

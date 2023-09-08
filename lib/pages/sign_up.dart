@@ -10,11 +10,11 @@ class SignUp extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Login',
+          'Sign Up',
           style: whiteTextStyle.copyWith(fontSize: 24, fontWeight: semibold),
         ),
         Text(
-          'Sign In to Continue',
+          'Register and Happy Shopping',
           style: blackTextSTyle.copyWith(fontSize: 16, fontWeight: medium),
         )
       ],
@@ -66,8 +66,24 @@ class SignUp extends StatelessWidget {
     return Column(
       children: [
         CustomInput(
-          label: 'username',
-          placeholder: 'Your email here',
+          label: 'Fullname',
+          placeholder: 'Your fullname',
+          iconUrl: 'Username_Icon.png',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        CustomInput(
+          label: 'Username',
+          placeholder: 'Your username',
+          iconUrl: 'Circle_Icon.png',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        CustomInput(
+          label: 'Email',
+          placeholder: 'Your email',
           iconUrl: 'Email_Icon.png',
         ),
         SizedBox(
@@ -77,28 +93,30 @@ class SignUp extends StatelessWidget {
           label: 'password',
           placeholder: 'password',
           iconUrl: 'Password_Icon.png',
-        )
+        ),
       ],
     );
   }
 
-  Widget customButton() {
-    return Container(
-      width: double.infinity,
-      height: 50,
-      decoration: BoxDecoration(
-        color: primaryColor,
-        borderRadius: BorderRadius.circular(18),
-      ),
-      child: TextButton(
-        onPressed: () {},
-        child: Text(
-          'Sign up',
-          style: whiteTextStyle.copyWith(fontSize: 16, fontWeight: medium),
-        ),
-      ),
-    );
-  }
+  // Widget customButton() {
+  //   return Container(
+  //     width: double.infinity,
+  //     height: 50,
+  //     decoration: BoxDecoration(
+  //       color: primaryColor,
+  //       borderRadius: BorderRadius.circular(18),
+  //     ),
+  //     child: TextButton(
+  //       onPressed: (){
+  //         Navigator.pushNamed(context, '/sign-up');
+  //       },
+  //       child: Text(
+  //         'Sign up',
+  //         style: whiteTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Widget footer() {
     return Text(
@@ -127,7 +145,24 @@ class SignUp extends StatelessWidget {
                   SizedBox(
                     height: 24,
                   ),
-                  customButton(),
+                  Container(
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home-page');
+                      },
+                      child: Text(
+                        'Sign up',
+                        style: whiteTextStyle.copyWith(
+                            fontSize: 16, fontWeight: medium),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Spacer(),
